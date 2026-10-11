@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>AquaGuard — Flood Alerts &amp; Community Rescue</title>
+  <meta name="description" content="AquaGuard helps communities monitor flood risk, send SOS requests and coordinate rescue in real time on iOS and web." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://db.onlinewebfonts.com/c/8cb707a9b8a73f8a7403336b861c3074?family=BubbledotICG-FinePos" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="styles.css?v=12" />
+</head>
+<body id="top">
+  <div class="bg" aria-hidden="true">
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source
+        src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260809_012548_ef22562c-c0ae-4816-ad9d-f8922af4e6a7.mp4"
+        type="video/mp4"
+      />
+    </video>
+  </div>
+  <canvas class="bg-grid" aria-hidden="true"></canvas>
+
+  <div class="page">
+    <header class="header">
+      <a class="logo" href="#top" aria-label="AquaGuard"><img src="assets/logo.png" alt="" width="52" height="52" /></a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#top" class="active" aria-current="page">Home</a>
+        <a href="#solution">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#team">Team</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a class="sign-in" href="https://aquaguard.vn/login">Sign in</a>
+
+      <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <div class="overlay" hidden></div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="#top" class="active">Home</a>
+      <a href="#solution">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#team">Team</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://aquaguard.vn/login" class="sign-in-mobile">Sign in</a>
+    </div>
+
+    <main>
+      <section class="hero" id="hero">
+        <img class="brand-mark anim" data-depth="22" style="--d: 0.05s" src="assets/logo-wordmark.png" alt="AquaGuard" width="1200" height="234" />
+
+        <h1 class="headline anim" data-depth="12">
+          <span class="line" style="--d: 0.12s">When floods hit,</span>
+          <span class="line" style="--d: 0.3s">help finds you faster.</span>
+        </h1>
+
+        <p class="subhead anim" style="--d: 0.28s">
+          Send an SOS in seconds. Rescue teams see exactly where you are and come to you.
+        </p>
+
+        <div class="sos-demo anim" data-depth="6" style="--d: 0.36s" aria-label="Example rescue update">
+          <div class="sos-row">
+            <span class="sos-tag"><i class="sos-dot"></i>Rescue update</span>
+            <p class="sos-msg"><span id="typed">Rescuers are coming &mdash; about 5 minutes away.</span><span class="caret" aria-hidden="true"></span></p>
+          </div>
+          <div class="sos-bar" aria-hidden="true"><i id="typed-bar" style="width: 45%"></i></div>
+          <p class="sos-status show" id="typed-status"><i class="fa-solid fa-location-arrow"></i><span id="typed-status-text">ETA 5 min</span><span class="caret note-caret" aria-hidden="true"></span></p>
+        </div>
+
+        <div class="actions anim" style="--d: 0.45s">
+          <a class="cta pulse" href="https://aquaguard.vn">Send SOS Now</a>
+          <a class="cta-ghost" href="https://aquaguard.vn/login">Register as a Rescue Team</a>
+        </div>
+      </section>
+
+      <section class="section" id="problem">
+        <div class="section-head reveal">
+          <span class="eyebrow">The problem</span>
+          <h2>In a flood, every minute counts.</h2>
+        </div>
+        <div class="grid">
+          <article class="card dark reveal" style="--i: 0">
+            <span class="card-icon"><i class="fa-solid fa-signal"></i></span>
+            <p>Phone signals drop and nobody knows where to look</p>
+          </article>
+          <article class="card dark reveal" style="--i: 1">
+            <span class="card-icon"><i class="fa-solid fa-layer-group"></i></span>
+            <p>Rescue teams work with scattered, outdated information</p>
+          </article>
+          <article class="card dark reveal" style="--i: 2">
+            <span class="card-icon"><i class="fa-solid fa-hourglass-half"></i></span>
+            <p>Families wait for news with no way to track progress</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="solution">
+        <div class="section-head reveal">
+          <span class="eyebrow">The solution</span>
+          <h2>One platform for the whole rescue chain.</h2>
+        </div>
+        <div class="grid">
+          <article class="card light reveal" style="--i: 0">
+            <span class="card-icon"><i class="fa-solid fa-truck-medical"></i></span>
+            <h3>Emergency SOS</h3>
+            <p>One tap sends your location and your situation.</p>
+          </article>
+          <article class="card light reveal" style="--i: 1">
+            <span class="card-icon"><i class="fa-solid fa-map-location-dot"></i></span>
+            <h3>Smart coordination</h3>
+            <p>A live map assigns the nearest team by urgency.</p>
+          </article>
+          <article class="card light reveal" style="--i: 2">
+            <span class="card-icon"><i class="fa-solid fa-route"></i></span>
+            <h3>Real-time tracking</h3>
+            <p>See rescuers approaching until help arrives.</p>
+          </article>
+        </div>
+
+        <div class="phones reveal" aria-label="AquaGuard app screens">
+          <figure class="phone p-side">
+            <img src="assets/phone-home.png" alt="AquaGuard home screen showing the current flood risk level and active alerts" loading="lazy" />
+            <figcaption>Know your risk</figcaption>
+          </figure>
+          <figure class="phone p-main">
+            <img src="assets/phone-rescue.png" alt="AquaGuard rescue request screen with a Send Rescue Request button" loading="lazy" />
+            <figcaption>Ask for help</figcaption>
+          </figure>
+          <figure class="phone p-side">
+            <img src="assets/phone-map.png" alt="AquaGuard live flood map with colour-coded severity pins" loading="lazy" />
+            <figcaption>See the flood map</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" id="how">
+        <div class="section-head reveal">
+          <span class="eyebrow">How it works</span>
+          <h2>Three steps from alert to safe.</h2>
+        </div>
+        <ol class="steps">
+          <li class="step reveal" style="--i: 0">
+            <span class="step-num">01</span>
+            <h3>Send</h3>
+            <p>Tap SOS and your location is shared instantly.</p>
+          </li>
+          <li class="step reveal" style="--i: 1">
+            <span class="step-num">02</span>
+            <h3>Dispatch</h3>
+            <p>The nearest available rescue team is alerted.</p>
+          </li>
+          <li class="step reveal" style="--i: 2">
+            <span class="step-num">03</span>
+            <h3>Track</h3>
+            <p>Follow the rescue live until you&rsquo;re safe.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section" id="audience">
+        <div class="section-head reveal">
+          <span class="eyebrow">Who it&rsquo;s for</span>
+          <h2>Made for everyone in the rescue chain.</h2>
+        </div>
+        <div class="grid">
+          <article class="card dark reveal" style="--i: 0">
+            <span class="card-icon"><i class="fa-solid fa-house-user"></i></span>
+            <h3>Residents</h3>
+            <p>Get help quickly and let family know you&rsquo;re safe.</p>
+          </article>
+          <article class="card dark reveal" style="--i: 1">
+            <span class="card-icon"><i class="fa-solid fa-life-ring"></i></span>
+            <h3>Rescue teams &amp; volunteers</h3>
+            <p>See every request, avoid overlap, save time.</p>
+          </article>
+          <article class="card dark reveal" style="--i: 2">
+            <span class="card-icon"><i class="fa-solid fa-landmark"></i></span>
+            <h3>Local authorities</h3>
+            <p>A clear overview of affected areas and response status.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="partners">
+        <div class="section-head reveal">
+          <span class="eyebrow">Partnership</span>
+          <h2>Partner with AquaGuard.</h2>
+          <p class="section-sub">Floods are too big for any one organization. Together, we can reach more people, faster.</p>
+        </div>
+
+        <h3 class="sub-head reveal">Who we work with</h3>
+        <div class="partner-grid">
+          <article class="card dark partner-card reveal" style="--i: 0">
+            <span class="card-icon"><i class="fa-solid fa-building-columns"></i></span>
+            <h3>Government &amp; local authorities</h3>
+            <p>A real-time overview of affected areas and rescue status.</p>
+          </article>
+          <article class="card dark partner-card reveal" style="--i: 1">
+            <span class="card-icon"><i class="fa-solid fa-people-group"></i></span>
+            <h3>Rescue organizations &amp; volunteer groups</h3>
+            <p>Coordinate teams and avoid duplicated effort.</p>
+          </article>
+          <article class="card dark partner-card reveal" style="--i: 2">
+            <span class="card-icon"><i class="fa-solid fa-hand-holding-heart"></i></span>
+            <h3>NGOs &amp; the Red Cross</h3>
+            <p>Direct aid to the households that need it most.</p>
+          </article>
+          <article class="card dark partner-card reveal" style="--i: 3">
+            <span class="card-icon"><i class="fa-solid fa-tower-cell"></i></span>
+            <h3>Telecom &amp; technology companies</h3>
+            <p>Improve connectivity and data sharing in disaster zones.</p>
+          </article>
+          <article class="card dark partner-card reveal" style="--i: 4">
+            <span class="card-icon"><i class="fa-solid fa-handshake-angle"></i></span>
+            <h3>Businesses &amp; CSR programs</h3>
+            <p>Fund rescue equipment and community preparedness.</p>
+          </article>
+        </div>
+
+        <div class="get-panel reveal">
+          <div class="get-intro">
+            <h3 class="sub-head left">What you get</h3>
+            <p>Everything your team needs to respond faster, from day one to the first flood season.</p>
+            <a class="cta" href="https://aquaguard.vn">Become a Partner</a>
+          </div>
+          <ul class="get-list">
+            <li><i class="fa-solid fa-check"></i><span>Dedicated onboarding and training for your team</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Custom dashboard and data reports for your area</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Integration with your existing hotlines and systems <em>(if available)</em></span></li>
+            <li><i class="fa-solid fa-check"></i><span>Joint preparedness drills before flood season</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Recognition as an official AquaGuard partner</span></li>
+          </ul>
+        </div>
+
+        <h3 class="sub-head reveal">How to become a partner</h3>
+        <ol class="steps">
+          <li class="step reveal" style="--i: 0">
+            <span class="step-num">01</span>
+            <h3>Reach out</h3>
+            <p>Tell us about your organization and goals.</p>
+          </li>
+          <li class="step reveal" style="--i: 1">
+            <span class="step-num">02</span>
+            <h3>Plan</h3>
+            <p>We design a setup that fits your region and team.</p>
+          </li>
+          <li class="step reveal" style="--i: 2">
+            <span class="step-num">03</span>
+            <h3>Launch</h3>
+            <p>Onboard your team and go live before the next flood season.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="logos reveal" aria-label="Partners and supporters">
+        <div class="marquee">
+          <ul class="marquee-track">
+            <li class="logo-item"><img src="assets/partners/bach-khoa.png" alt="Bach Khoa Innovation" loading="lazy" /></li>
+            <li class="logo-item"><img src="assets/partners/uts.png" alt="UTS" loading="lazy" /></li>
+            <li class="logo-item"><img src="assets/partners/rmit.png" alt="RMIT University" loading="lazy" /></li>
+            <li class="logo-item"><img src="assets/partners/laval.png" alt="Université Laval" loading="lazy" /></li>
+            <li class="logo-item"><img src="assets/partners/leave-a-nest.png" alt="Leave a Nest" loading="lazy" /></li>
+            <li class="logo-item"><img src="assets/partners/dow.png" alt="Dow" loading="lazy" /></li>
+          </ul>
+          <ul class="marquee-track" aria-hidden="true">
+            <li class="logo-item"><img src="assets/partners/bach-khoa.png" alt="" loading="lazy" /></li>
+            <li class="logo-item"><img src="assets/partners/uts.png" alt="" loading="lazy" /></li>
+            <li class="logo-item"><img src="assets/partners/rmit.png" alt="" loading="lazy" /></li>
+            <li class="logo-item"><img src="assets/partners/laval.png" alt="" loading="lazy" /></li>
+            <li class="logo-item"><img src="assets/partners/leave-a-nest.png" alt="" loading="lazy" /></li>
+            <li class="logo-item"><img src="assets/partners/dow.png" alt="" loading="lazy" /></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="trust">
+        <div class="trust-panel reveal">
+          <span class="eyebrow">Trust</span>
+          <h2>Built for emergencies, built to be trusted.</h2>
+          <ul class="trust-list">
+            <li><i class="fa-solid fa-lock"></i><span>Location data is used only for rescue and protected by strict privacy rules.</span></li>
+            <li><i class="fa-solid fa-user-shield"></i><span>Role-based access keeps residents, rescuers and admins in their own lanes.</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section-wide" id="team">
+        <div class="section-head reveal">
+          <span class="eyebrow">Team</span>
+          <h2>Meet the people<br /><span class="muted">behind AquaGuard.</span></h2>
+          <p class="section-sub">A team of engineers, rescue experts and community volunteers working to make flood response faster and safer.</p>
+        </div>
+        <div class="team-row">
+          <article class="member reveal" style="--i: 0">
+            <div class="member-frame">
+              <i class="fa-solid fa-user member-ph" aria-hidden="true"></i>
+              <!-- <img src="assets/team/member-1.jpg" alt="Quân" loading="lazy" /> -->
+              <a class="member-li" href="#" target="_blank" rel="noopener" aria-label="Quân on LinkedIn"><i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <h3>Quân</h3>
+            <span class="member-role">Chief Executive Officer</span>
+          </article>
+          <article class="member reveal" style="--i: 1">
+            <div class="member-frame">
+              <i class="fa-solid fa-user member-ph" aria-hidden="true"></i>
+              <!-- <img src="assets/team/member-2.jpg" alt="Nghĩa" loading="lazy" /> -->
+              <a class="member-li" href="#" target="_blank" rel="noopener" aria-label="Nghĩa on LinkedIn"><i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <h3>Nghĩa</h3>
+            <span class="member-role">Chief Technology Officer</span>
+          </article>
+          <article class="member reveal" style="--i: 2">
+            <div class="member-frame">
+              <i class="fa-solid fa-user member-ph" aria-hidden="true"></i>
+              <!-- <img src="assets/team/member-3.jpg" alt="Sơn" loading="lazy" /> -->
+              <a class="member-li" href="#" target="_blank" rel="noopener" aria-label="Sơn on LinkedIn"><i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <h3>Sơn</h3>
+            <span class="member-role">Chief Product Officer</span>
+          </article>
+          <article class="member reveal" style="--i: 3">
+            <div class="member-frame">
+              <i class="fa-solid fa-user member-ph" aria-hidden="true"></i>
+              <!-- <img src="assets/team/member-4.jpg" alt="Quân" loading="lazy" /> -->
+              <a class="member-li" href="#" target="_blank" rel="noopener" aria-label="Quân on LinkedIn"><i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <h3>Quân</h3>
+            <span class="member-role">Head of Marketing</span>
+          </article>
+          <article class="member reveal" style="--i: 4">
+            <div class="member-frame">
+              <i class="fa-solid fa-user member-ph" aria-hidden="true"></i>
+              <!-- <img src="assets/team/member-5.jpg" alt="Khang" loading="lazy" /> -->
+              <a class="member-li" href="#" target="_blank" rel="noopener" aria-label="Khang on LinkedIn"><i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <h3>Khang</h3>
+            <span class="member-role">Software Engineer</span>
+          </article>
+        </div>
+        <div class="team-close reveal">
+          <p>We&rsquo;ve seen how hard floods hit our communities. That&rsquo;s why we built AquaGuard.</p>
+          <a class="cta" href="https://aquaguard.vn">Contact Us</a>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="section-head reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Questions, answered.</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Do I need to install an app?</summary>
+            <p>No. AquaGuard works in any browser at aquaguard.vn. If you prefer, there is also a native iOS app &mdash; both connect to the same live rescue network.</p>
+          </details>
+          <details>
+            <summary>Does it work with a weak signal?</summary>
+            <p>SOS requests need a data connection, so AquaGuard includes one-tap registration for emergency 4G data packages from Viettel, Vinaphone and Mobifone, plus direct-dial shortcuts for 113, 114 and 115. Safety guides stay readable offline.</p>
+          </details>
+          <details>
+            <summary>Is it free for residents?</summary>
+            <p>Yes. AquaGuard is free for residents.</p>
+          </details>
+          <details>
+            <summary>How do rescue teams join?</summary>
+            <p>Create an account with the Rescuer role at aquaguard.vn, then form or join a rescue team. Rescuer access requires a team access code &mdash; use &ldquo;Partner With Us&rdquo; below to get one.</p>
+          </details>
+          <details>
+            <summary>How is my location data used and protected?</summary>
+            <p>Your location is used to send your SOS, route rescuers to you and, only if you connect with them, show your status to family. Access is limited by role and requires a signed-in account.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section final" id="cta">
+        <div class="final-panel reveal">
+          <h2>Prepare before the next flood season.</h2>
+          <p>Join AquaGuard today. Because the right information, at the right time, saves lives.</p>
+          <div class="actions">
+            <a class="cta" href="https://aquaguard.vn/login">Get Started</a>
+            <a class="cta-ghost" href="https://aquaguard.vn">Partner With Us</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="footer-logo" href="#top" aria-label="AquaGuard"><img src="assets/logo.png" alt="" width="32" height="32" /></a>
+      <span>&copy; 2026 AquaGuard</span>
+    </footer>
+  </div>
+
+  <script src="main.js?v=7"></script>
+</body>
+</html>
