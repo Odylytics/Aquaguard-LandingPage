@@ -1,0 +1,6 @@
+.DS_Store
+node_modules/
+.vercel/
+*Artlist*.mp4
+547251*.mp4
+Personal_Img/

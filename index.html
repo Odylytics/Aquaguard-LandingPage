@@ -7,8 +7,7 @@
   <meta name="description" content="AquaGuard helps communities monitor flood risk, send SOS requests and coordinate rescue in real time on iOS and web." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link href="https://db.onlinewebfonts.com/c/8cb707a9b8a73f8a7403336b861c3074?family=BubbledotICG-FinePos" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet" />
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -16,17 +15,26 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
-  <link rel="stylesheet" href="styles.css?v=12" />
+  <link rel="stylesheet" href="styles.css?v=27" />
 </head>
 <body id="top">
   <div class="bg" aria-hidden="true">
-    <video class="bg-video" autoplay muted loop playsinline>
-      <source
-        src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260809_012548_ef22562c-c0ae-4816-ad9d-f8922af4e6a7.mp4"
-        type="video/mp4"
-      />
+    <video class="bg-video" autoplay muted loop playsinline preload="auto" poster="assets/hero-flood-poster.jpg">
+      <source src="assets/hero-flood.mp4" type="video/mp4" />
     </video>
+    <div class="bg-tint"></div>
+    <div class="bg-waves">
+      <svg class="wave w1" viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 58.0 L20 60.9 L40 63.7 L60 66.0 L80 67.9 L100 69.1 L120 69.7 L140 69.6 L160 69.0 L180 68.0 L200 66.7 L220 65.1 L240 63.6 L260 62.2 L280 61.0 L300 60.0 L320 59.2 L340 58.5 L360 58.0 L380 57.5 L400 56.8 L420 56.0 L440 55.0 L460 53.8 L480 52.4 L500 50.9 L520 49.3 L540 48.0 L560 47.0 L580 46.4 L600 46.3 L620 46.9 L640 48.1 L660 50.0 L680 52.3 L700 55.1 L720 58.0 L740 60.9 L760 63.7 L780 66.0 L800 67.9 L820 69.1 L840 69.7 L860 69.6 L880 69.0 L900 68.0 L920 66.7 L940 65.1 L960 63.6 L980 62.2 L1000 61.0 L1020 60.0 L1040 59.2 L1060 58.5 L1080 58.0 L1100 57.5 L1120 56.8 L1140 56.0 L1160 55.0 L1180 53.8 L1200 52.4 L1220 50.9 L1240 49.3 L1260 48.0 L1280 47.0 L1300 46.4 L1320 46.3 L1340 46.9 L1360 48.1 L1380 50.0 L1400 52.3 L1420 55.1 L1440 58.0 L1460 60.9 L1480 63.7 L1500 66.0 L1520 67.9 L1540 69.1 L1560 69.7 L1580 69.6 L1600 69.0 L1620 68.0 L1640 66.7 L1660 65.1 L1680 63.6 L1700 62.2 L1720 61.0 L1740 60.0 L1760 59.2 L1780 58.5 L1800 58.0 L1820 57.5 L1840 56.8 L1860 56.0 L1880 55.0 L1900 53.8 L1920 52.4 L1940 50.9 L1960 49.3 L1980 48.0 L2000 47.0 L2020 46.4 L2040 46.3 L2060 46.9 L2080 48.1 L2100 50.0 L2120 52.3 L2140 55.1 L2160 58.0 L2180 60.9 L2200 63.7 L2220 66.0 L2240 67.9 L2260 69.1 L2280 69.7 L2300 69.6 L2320 69.0 L2340 68.0 L2360 66.7 L2380 65.1 L2400 63.6 L2420 62.2 L2440 61.0 L2460 60.0 L2480 59.2 L2500 58.5 L2520 58.0 L2540 57.5 L2560 56.8 L2580 56.0 L2600 55.0 L2620 53.8 L2640 52.4 L2660 50.9 L2680 49.3 L2700 48.0 L2720 47.0 L2740 46.4 L2760 46.3 L2780 46.9 L2800 48.1 L2820 50.0 L2840 52.3 L2860 55.1 L2880 58.0 V120 H0 Z"/></svg>
+      <svg class="wave w2" viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 81.1 L20 80.0 L40 78.7 L60 77.2 L80 75.7 L100 74.2 L120 73.0 L140 72.0 L160 71.2 L180 70.6 L200 70.2 L220 69.8 L240 69.4 L260 69.0 L280 68.4 L300 67.7 L320 66.9 L340 66.0 L360 65.1 L380 64.4 L400 63.8 L420 63.6 L440 63.7 L460 64.3 L480 65.4 L500 67.0 L520 68.9 L540 71.1 L560 73.4 L580 75.7 L600 77.8 L620 79.6 L640 81.0 L660 81.8 L680 82.1 L700 81.9 L720 81.1 L740 80.0 L760 78.7 L780 77.2 L800 75.7 L820 74.2 L840 73.0 L860 72.0 L880 71.2 L900 70.6 L920 70.2 L940 69.8 L960 69.4 L980 69.0 L1000 68.4 L1020 67.7 L1040 66.9 L1060 66.0 L1080 65.1 L1100 64.4 L1120 63.8 L1140 63.6 L1160 63.7 L1180 64.3 L1200 65.4 L1220 67.0 L1240 68.9 L1260 71.1 L1280 73.4 L1300 75.7 L1320 77.8 L1340 79.6 L1360 81.0 L1380 81.8 L1400 82.1 L1420 81.9 L1440 81.1 L1460 80.0 L1480 78.7 L1500 77.2 L1520 75.7 L1540 74.2 L1560 73.0 L1580 72.0 L1600 71.2 L1620 70.6 L1640 70.2 L1660 69.8 L1680 69.4 L1700 69.0 L1720 68.4 L1740 67.7 L1760 66.9 L1780 66.0 L1800 65.1 L1820 64.4 L1840 63.8 L1860 63.6 L1880 63.7 L1900 64.3 L1920 65.4 L1940 67.0 L1960 68.9 L1980 71.1 L2000 73.4 L2020 75.7 L2040 77.8 L2060 79.6 L2080 81.0 L2100 81.8 L2120 82.1 L2140 81.9 L2160 81.1 L2180 80.0 L2200 78.7 L2220 77.2 L2240 75.7 L2260 74.2 L2280 73.0 L2300 72.0 L2320 71.2 L2340 70.6 L2360 70.2 L2380 69.8 L2400 69.4 L2420 69.0 L2440 68.4 L2460 67.7 L2480 66.9 L2500 66.0 L2520 65.1 L2540 64.4 L2560 63.8 L2580 63.6 L2600 63.7 L2620 64.3 L2640 65.4 L2660 67.0 L2680 68.9 L2700 71.1 L2720 73.4 L2740 75.7 L2760 77.8 L2780 79.6 L2800 81.0 L2820 81.8 L2840 82.1 L2860 81.9 L2880 81.1 V120 H0 Z"/></svg>
+      <svg class="wave w3" viewBox="0 0 2880 120" preserveAspectRatio="none"><path d="M0 86.5 L20 85.9 L40 85.5 L60 85.3 L80 85.1 L100 85.0 L120 84.8 L140 84.5 L160 84.2 L180 83.8 L200 83.3 L220 82.9 L240 82.6 L260 82.5 L280 82.6 L300 82.9 L320 83.6 L340 84.7 L360 86.0 L380 87.5 L400 89.2 L420 90.9 L440 92.4 L460 93.8 L480 94.9 L500 95.6 L520 95.9 L540 95.8 L560 95.2 L580 94.4 L600 93.2 L620 92.0 L640 90.6 L660 89.4 L680 88.2 L700 87.2 L720 86.5 L740 85.9 L760 85.5 L780 85.3 L800 85.1 L820 85.0 L840 84.8 L860 84.5 L880 84.2 L900 83.8 L920 83.3 L940 82.9 L960 82.6 L980 82.5 L1000 82.6 L1020 82.9 L1040 83.6 L1060 84.7 L1080 86.0 L1100 87.5 L1120 89.2 L1140 90.9 L1160 92.4 L1180 93.8 L1200 94.9 L1220 95.6 L1240 95.9 L1260 95.8 L1280 95.2 L1300 94.4 L1320 93.2 L1340 92.0 L1360 90.6 L1380 89.4 L1400 88.2 L1420 87.2 L1440 86.5 L1460 85.9 L1480 85.5 L1500 85.3 L1520 85.1 L1540 85.0 L1560 84.8 L1580 84.5 L1600 84.2 L1620 83.8 L1640 83.3 L1660 82.9 L1680 82.6 L1700 82.5 L1720 82.6 L1740 82.9 L1760 83.6 L1780 84.7 L1800 86.0 L1820 87.5 L1840 89.2 L1860 90.9 L1880 92.4 L1900 93.8 L1920 94.9 L1940 95.6 L1960 95.9 L1980 95.8 L2000 95.2 L2020 94.4 L2040 93.2 L2060 92.0 L2080 90.6 L2100 89.4 L2120 88.2 L2140 87.2 L2160 86.5 L2180 85.9 L2200 85.5 L2220 85.3 L2240 85.1 L2260 85.0 L2280 84.8 L2300 84.5 L2320 84.2 L2340 83.8 L2360 83.3 L2380 82.9 L2400 82.6 L2420 82.5 L2440 82.6 L2460 82.9 L2480 83.6 L2500 84.7 L2520 86.0 L2540 87.5 L2560 89.2 L2580 90.9 L2600 92.4 L2620 93.8 L2640 94.9 L2660 95.6 L2680 95.9 L2700 95.8 L2720 95.2 L2740 94.4 L2760 93.2 L2780 92.0 L2800 90.6 L2820 89.4 L2840 88.2 L2860 87.2 L2880 86.5 V120 H0 Z"/></svg>
+    </div>
   </div>
+  <aside class="gauge" aria-label="Flood gauge: page progress">
+    <div class="gauge-scale" aria-hidden="true"><span style="--t:0">0</span><span style="--t:.25">1</span><span style="--t:.5">2</span><span style="--t:.75">3</span><span style="--t:1">4 m</span></div>
+    <div class="gauge-track"><div class="gauge-fill"></div></div>
+    <div class="gauge-chip" aria-hidden="true"><i class="gauge-dot"></i><b class="gauge-depth">0.0 m</b><span class="gauge-state">Safe</span></div>
+    <button class="gauge-ring" type="button" role="slider" aria-label="Scroll position" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i class="fa-solid fa-life-ring"></i></button>
+  </aside>
   <canvas class="bg-grid" aria-hidden="true"></canvas>
 
   <div class="page">
@@ -63,8 +71,8 @@
         <img class="brand-mark anim" data-depth="22" style="--d: 0.05s" src="assets/logo-wordmark.png" alt="AquaGuard" width="1200" height="234" />
 
         <h1 class="headline anim" data-depth="12">
-          <span class="line" style="--d: 0.12s">When floods hit,</span>
-          <span class="line" style="--d: 0.3s">help finds you faster.</span>
+          <span class="line" style="--d: 0.12s">When the rain falls hard,</span>
+          <span class="line" style="--d: 0.3s">trust <em class="hl">AquaGuard</em>.</span>
         </h1>
 
         <p class="subhead anim" style="--d: 0.28s">
@@ -83,6 +91,32 @@
         <div class="actions anim" style="--d: 0.45s">
           <a class="cta pulse" href="https://aquaguard.vn">Send SOS Now</a>
           <a class="cta-ghost" href="https://aquaguard.vn/login">Register as a Rescue Team</a>
+        </div>
+      </section>
+
+      <section class="section stats-sec" id="impact">
+        <div class="stats-head reveal"><span class="eyebrow">Our impact so far</span></div>
+        <div class="stats-grid">
+          <article class="stat reveal" style="--i: 0; --lvl: 0.42">
+            <span class="stat-icon"><i class="fa-solid fa-share-nodes"></i></span>
+            <div class="stat-num" data-target="1" data-suffix="M">0M</div>
+            <p class="stat-label">Social media reach</p>
+          </article>
+          <article class="stat reveal" style="--i: 1; --lvl: 0.55">
+            <span class="stat-icon"><i class="fa-solid fa-users"></i></span>
+            <div class="stat-num" data-target="500" data-suffix="+">0+</div>
+            <p class="stat-label">Active users</p>
+          </article>
+          <article class="stat reveal" style="--i: 2; --lvl: 0.48">
+            <span class="stat-icon"><i class="fa-solid fa-clipboard-list"></i></span>
+            <div class="stat-num" data-target="300" data-suffix="+">0+</div>
+            <p class="stat-label">Surveyed users</p>
+          </article>
+          <article class="stat reveal" style="--i: 3; --lvl: 0.36">
+            <span class="stat-icon"><i class="fa-solid fa-life-ring"></i></span>
+            <div class="stat-num" data-target="3" data-suffix="">0</div>
+            <p class="stat-label">Rescue organizations worked with</p>
+          </article>
         </div>
       </section>
 
@@ -306,8 +340,7 @@
         <div class="team-row">
           <article class="member reveal" style="--i: 0">
             <div class="member-frame">
-              <i class="fa-solid fa-user member-ph" aria-hidden="true"></i>
-              <!-- <img src="assets/team/member-1.jpg" alt="Quân" loading="lazy" /> -->
+              <img src="assets/team/quan-a.webp" alt="Quân" width="600" height="770" loading="lazy" />
               <a class="member-li" href="#" target="_blank" rel="noopener" aria-label="Quân on LinkedIn"><i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span><i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <h3>Quân</h3>
@@ -315,8 +348,7 @@
           </article>
           <article class="member reveal" style="--i: 1">
             <div class="member-frame">
-              <i class="fa-solid fa-user member-ph" aria-hidden="true"></i>
-              <!-- <img src="assets/team/member-2.jpg" alt="Nghĩa" loading="lazy" /> -->
+              <img src="assets/team/nghia.webp" alt="Nghĩa" width="600" height="770" loading="lazy" />
               <a class="member-li" href="#" target="_blank" rel="noopener" aria-label="Nghĩa on LinkedIn"><i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span><i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <h3>Nghĩa</h3>
@@ -324,8 +356,7 @@
           </article>
           <article class="member reveal" style="--i: 2">
             <div class="member-frame">
-              <i class="fa-solid fa-user member-ph" aria-hidden="true"></i>
-              <!-- <img src="assets/team/member-3.jpg" alt="Sơn" loading="lazy" /> -->
+              <img src="assets/team/son.webp" alt="Sơn" width="600" height="770" loading="lazy" />
               <a class="member-li" href="#" target="_blank" rel="noopener" aria-label="Sơn on LinkedIn"><i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span><i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <h3>Sơn</h3>
@@ -333,8 +364,7 @@
           </article>
           <article class="member reveal" style="--i: 3">
             <div class="member-frame">
-              <i class="fa-solid fa-user member-ph" aria-hidden="true"></i>
-              <!-- <img src="assets/team/member-4.jpg" alt="Quân" loading="lazy" /> -->
+              <img src="assets/team/quan-b.webp" alt="Quân" width="600" height="770" loading="lazy" />
               <a class="member-li" href="#" target="_blank" rel="noopener" aria-label="Quân on LinkedIn"><i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span><i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <h3>Quân</h3>
@@ -342,8 +372,7 @@
           </article>
           <article class="member reveal" style="--i: 4">
             <div class="member-frame">
-              <i class="fa-solid fa-user member-ph" aria-hidden="true"></i>
-              <!-- <img src="assets/team/member-5.jpg" alt="Khang" loading="lazy" /> -->
+              <img src="assets/team/khang.webp" alt="Khang" width="600" height="770" loading="lazy" />
               <a class="member-li" href="#" target="_blank" rel="noopener" aria-label="Khang on LinkedIn"><i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span><i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <h3>Khang</h3>
@@ -403,6 +432,6 @@
     </footer>
   </div>
 
-  <script src="main.js?v=7"></script>
+  <script src="main.js?v=21"></script>
 </body>
 </html>
