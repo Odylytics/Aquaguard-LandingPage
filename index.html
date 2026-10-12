@@ -15,7 +15,7 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
-  <link rel="stylesheet" href="styles.css?v=34" />
+  <link rel="stylesheet" href="styles.css?v=46" />
 </head>
 <body id="top">
   <div class="bg" aria-hidden="true">
@@ -126,16 +126,22 @@
           <h2>In a flood, every minute counts.</h2>
         </div>
         <div class="grid">
-          <article class="card dark reveal" style="--i: 0">
-            <span class="card-icon"><i class="fa-solid fa-signal"></i></span>
+          <article class="card dark problem-card reveal" style="--i: 0">
+            <figure class="problem-img">
+              <img src="assets/problem-signal.webp" alt="A flooded street, a failing signal, and no way to tell anyone where you are." width="720" height="697" loading="lazy" />
+            </figure>
             <p>Phone signals drop and nobody knows where to look</p>
           </article>
-          <article class="card dark reveal" style="--i: 1">
-            <span class="card-icon"><i class="fa-solid fa-layer-group"></i></span>
+          <article class="card dark problem-card reveal" style="--i: 1">
+            <figure class="problem-img">
+              <img src="assets/problem-data.webp" alt="Photos with no timestamps, pins on a map, nothing confirmed." width="720" height="697" loading="lazy" />
+            </figure>
             <p>Rescue teams work with scattered, outdated information</p>
           </article>
-          <article class="card dark reveal" style="--i: 2">
-            <span class="card-icon"><i class="fa-solid fa-hourglass-half"></i></span>
+          <article class="card dark problem-card reveal" style="--i: 2">
+            <figure class="problem-img">
+              <img src="assets/problem-family.webp" alt="Waiting for a message, not knowing if help is on the way." width="720" height="697" loading="lazy" />
+            </figure>
             <p>Families wait for news with no way to track progress</p>
           </article>
         </div>
@@ -147,20 +153,32 @@
           <h2>One platform for the whole rescue chain.</h2>
         </div>
         <div class="grid">
-          <article class="card light reveal" style="--i: 0">
-            <span class="card-icon"><i class="fa-solid fa-truck-medical"></i></span>
+          <article class="card light solution-card reveal" style="--i: 0">
+            <figure class="problem-img">
+              <img src="assets/solution-sos.webp" alt="A rainstorm flood scene where a young man presses an SOS button on his phone and his location is sent via satellite" width="720" height="746" loading="lazy" />
+            </figure>
+            <div class="solution-body">
             <h3>Emergency SOS</h3>
             <p>One tap sends your location and your situation.</p>
+          </div>
           </article>
-          <article class="card light reveal" style="--i: 1">
-            <span class="card-icon"><i class="fa-solid fa-map-location-dot"></i></span>
+          <article class="card light solution-card reveal" style="--i: 1">
+            <figure class="problem-img">
+              <img src="assets/solution-dispatch.webp" alt="A rescue team at a live map screen with photos of nearby rescue teams linked to the person asking for help" width="720" height="746" loading="lazy" />
+            </figure>
+            <div class="solution-body">
             <h3>Smart coordination</h3>
             <p>A live map assigns the nearest team by urgency.</p>
+          </div>
           </article>
-          <article class="card light reveal" style="--i: 2">
-            <span class="card-icon"><i class="fa-solid fa-route"></i></span>
+          <article class="card light solution-card reveal" style="--i: 2">
+            <figure class="problem-img">
+              <img src="assets/solution-track.webp" alt="A rescue boat heading toward a stranded family on a rooftop while the team follows the route on a tablet" width="720" height="746" loading="lazy" />
+            </figure>
+            <div class="solution-body">
             <h3>Real-time tracking</h3>
             <p>See rescuers approaching until help arrives.</p>
+          </div>
           </article>
         </div>
 
@@ -302,21 +320,72 @@
         </div>
       </section>
 
-      <section class="section" id="trust">
-        <div class="trust-panel reveal">
-          <span class="eyebrow">Trust</span>
-          <h2>Built for emergencies, built to be trusted.</h2>
-          <ul class="trust-list">
-            <li><i class="fa-solid fa-lock"></i><span>Location data is used only for rescue and protected by strict privacy rules.</span></li>
-            <li><i class="fa-solid fa-user-shield"></i><span>Role-based access keeps residents, rescuers and admins in their own lanes.</span></li>
-          </ul>
+      <section class="section" id="awards">
+        <div class="section-head reveal">
+          <span class="eyebrow">Awards &amp; recognition</span>
+          <h2>Recognized by judges,<br /><span class="muted">built for the field.</span></h2>
+        </div>
+        <div class="awards-grid">
+          <article class="award tier-gold reveal" style="--i: 0">
+            <span class="award-medal"><i class="fa-solid fa-trophy"></i></span>
+            <span class="award-place">1st</span>
+            <h3>1st Prize</h3>
+            <p class="award-name">OISP Presentation Contest</p>
+            <span class="award-year">2025</span>
+          </article>
+          <article class="award tier-gold reveal" style="--i: 1">
+            <span class="award-medal"><i class="fa-solid fa-trophy"></i></span>
+            <span class="award-place">1st</span>
+            <h3>1st Prize</h3>
+            <p class="award-name">EPICS 8th Competition</p>
+            <span class="award-org">ASU &amp; Dow Vietnam</span>
+            <span class="award-year">2026</span>
+          </article>
+          <article class="award tier-silver reveal" style="--i: 2">
+            <span class="award-medal"><i class="fa-solid fa-medal"></i></span>
+            <span class="award-place">2nd</span>
+            <h3>2nd Prize</h3>
+            <p class="award-name">Bach Khoa Innovation</p>
+            <span class="award-year">2026</span>
+          </article>
+        </div>
+
+        <h3 class="sub-head reveal">In the press</h3>
+        <div class="press-grid">
+          <!-- Press item 1: set href, swap the image, headline and outlet -->
+          <a class="press reveal" style="--i: 0" href="#" target="_blank" rel="noopener">
+            <span class="press-img"><i class="fa-regular fa-newspaper"></i></span>
+            <span class="press-body">
+              <span class="press-outlet">Publication name &middot; Date</span>
+              <strong>Article headline about AquaGuard goes here</strong>
+              <span class="press-link">Read article <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </span>
+          </a>
+          <!-- Press item 2: set href, swap the image, headline and outlet -->
+          <a class="press reveal" style="--i: 1" href="#" target="_blank" rel="noopener">
+            <span class="press-img"><i class="fa-regular fa-newspaper"></i></span>
+            <span class="press-body">
+              <span class="press-outlet">Publication name &middot; Date</span>
+              <strong>Article headline about AquaGuard goes here</strong>
+              <span class="press-link">Read article <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </span>
+          </a>
+          <!-- Press item 3: set href, swap the image, headline and outlet -->
+          <a class="press reveal" style="--i: 2" href="#" target="_blank" rel="noopener">
+            <span class="press-img"><i class="fa-regular fa-newspaper"></i></span>
+            <span class="press-body">
+              <span class="press-outlet">Publication name &middot; Date</span>
+              <strong>Article headline about AquaGuard goes here</strong>
+              <span class="press-link">Read article <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </span>
+          </a>
         </div>
       </section>
 
       <section class="section section-wide" id="team">
         <div class="section-head reveal">
           <span class="eyebrow">Team</span>
-          <h2>Meet the people<br /><span class="muted">behind AquaGuard.</span></h2>
+          <h2>Meet the people<br /><span class="muted">behind</span> <img class="h2-logo" src="assets/logo-dark.png" alt="AquaGuard" width="900" height="244" /></h2>
           <p class="section-sub">A team of engineers, rescue experts and community volunteers working to make flood response faster and safer.</p>
         </div>
         <div class="team-row">
@@ -414,6 +483,6 @@
     </footer>
   </div>
 
-  <script src="main.js?v=31"></script>
+  <script src="main.js?v=46"></script>
 </body>
 </html>

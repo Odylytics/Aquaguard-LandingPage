@@ -246,7 +246,7 @@
     var stateEl = gauge.querySelector(".gauge-state");
     var sections = [
       ["impact", "Our impact"], ["problem", "The problem"], ["solution", "The solution"], ["how", "How it works"], ["audience", "Who it’s for"],
-      ["partners", "Partnership"], ["trust", "Trust"], ["team", "Team"], ["faq", "FAQ"], ["cta", "Get started"]
+      ["partners", "Partnership"], ["awards", "Awards"], ["team", "Team"], ["faq", "FAQ"], ["cta", "Get started"]
     ];
     var marks = [];
     sections.forEach(function (s) {
