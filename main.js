@@ -216,14 +216,14 @@
               boost = Math.exp(-(dx * dx + dy * dy) / (2 * sigma * sigma));
             }
             var ripple = 0;
-            if (hasMouse && !reduced) { ripple = Math.sin(Math.sqrt(dx * dx + dy * dy) * 0.045 - t * 3.2) * Math.exp(-Math.sqrt(dx * dx + dy * dy) / 260) * 20; }
-            var lift = wave + boost * 50 + ripple;
+            if (hasMouse && !reduced) { ripple = Math.sin(Math.sqrt(dx * dx + dy * dy) * 0.045 - t * 3.2) * Math.exp(-Math.sqrt(dx * dx + dy * dy) / 260) * 9; }
+            var lift = wave + boost * 26 + ripple;
             var sy = horizon + (camH - lift) * s;
             if (sy < -20 || sy > H + 40) continue;
             var c = colorAt((x / (COLS * SX / 2) + 1) / 2);
-            var b = boost * 70;
-            var r = Math.min(Math.max(1.15 * s, 0.7), 3.8) * (1 + boost * 0.7);
-            var a = Math.min(1, (0.28 + Math.min(s, 3) * 0.09 + boost * 0.5) * fade);
+            var b = boost * 35;
+            var r = Math.min(Math.max(1.15 * s, 0.7), 3.8) * (1 + boost * 0.4);
+            var a = Math.min(1, (0.28 + Math.min(s, 3) * 0.09 + boost * 0.28) * fade);
             ctx.fillStyle = "rgba(" + Math.min(255, c[0] + b | 0) + "," + Math.min(255, c[1] + b | 0) + "," + Math.min(255, c[2] + b | 0) + "," + a.toFixed(3) + ")";
             ctx.beginPath();
             ctx.arc(sx, sy, r, 0, 6.2832);
@@ -335,13 +335,13 @@
   var easeOut = function (t) { return 1 - Math.pow(1 - t, 4); };
   var runNum = function (el, delay) {
     var target = parseFloat(el.dataset.target), suffix = el.dataset.suffix || "";
-    if (reduced) { el.textContent = target + suffix; return; }
+    if (reduced) { el.textContent = target.toLocaleString("en-US") + suffix; return; }
     setTimeout(function () {
       var start = null, dur = 1900;
       var step = function (now) {
         if (start === null) start = now;
         var p = Math.min((now - start) / dur, 1);
-        el.textContent = Math.round(target * easeOut(p)) + suffix;
+        el.textContent = Math.round(target * easeOut(p)).toLocaleString("en-US") + suffix;
         if (p < 1) requestAnimationFrame(step);
       };
       requestAnimationFrame(step);
@@ -357,7 +357,7 @@
     }, { threshold: 0.4 });
     nums.forEach(function (n) { numIo.observe(n); });
   } else {
-    nums.forEach(function (n) { n.textContent = n.dataset.target + (n.dataset.suffix || ""); });
+    nums.forEach(function (n) { n.textContent = Number(n.dataset.target).toLocaleString("en-US") + (n.dataset.suffix || ""); });
   }
 
   // Build the water inside each impact card (layered waves, glints, bubbles)
